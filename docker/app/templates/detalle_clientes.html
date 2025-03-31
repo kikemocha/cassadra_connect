@@ -1,0 +1,11 @@
+<h1>Pedidos del Cliente {{ cliente_id }}</h1>
+<ul>
+  {% for pedido in pedidos %}
+    <li>
+        <a href="{{ url_for('detalle_pedido', pedido_id=pedido['pedido_id']) }}">
+            Pedido ID: {{ pedido['pedido_id'] }}
+        </a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="{{ url_for('home') }}">Volver</a>

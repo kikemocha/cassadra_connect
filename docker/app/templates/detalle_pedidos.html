@@ -1,0 +1,12 @@
+<h1>Productos del pedido: {{ pedido_id }}</h1>
+<ol>
+  {% for producto in productos %}
+    <dl>
+        <dt>Pedido ID: {{ producto['producto_id'] }}</dt>
+        <dd>Nombre: {{ producto['nombre']}}</dd>
+        <dd>Cantidad: {{ producto['cantidad']}}</dd>
+        <dd>Precio: {{ producto['precio']}}</dd>
+    </dl>  
+  {% endfor %}
+</ol>
+<a href="{{ url_for('home') }}">Volver</a>

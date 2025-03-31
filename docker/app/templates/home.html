@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <ul>
+    {% for cliente in clientes %}
+        <li>
+            <a href="{{ url_for('detalle_cliente', cliente_id=cliente['cliente_id']) }}">
+                {{ cliente['nombre'] }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
